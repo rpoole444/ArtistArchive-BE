@@ -6,7 +6,7 @@ app.use(cors());
 app.use(express.json());
 app.use(express.static("public"));
 
-app.set("port", process.env.PORT || 3000);
+app.set("port", process.env.PORT || 3001);
 app.locals.title = "Reid's Top Thirty";
 
 app.get("/", (request, response) => {
