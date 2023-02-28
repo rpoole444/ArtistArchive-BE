@@ -161,7 +161,7 @@ app.locals.artists = [
     image:
       "https://www.dominomusic.com/res/zz1Q/1200_1200/Dirty-Projectors---PC--Jason-Frank-Rothenberg-2465-Launch---300dpi.jpg",
     rank: 16,
-    description:,
+    description:"Dirty Projectors is an American indie rock band from Brooklyn, New York, formed in 2002. The band is the project of singer-songwriter David Longstreth, who has served as the band's sole constant member throughout numerous line-up changes. The band's current line-up consists of Longstreth, alongside Mike Daniel Johnson (drums), Maia Friedman (vocals, guitar, keyboards), Felicia Douglass (vocals, percussion, keyboards) and Kristin Slipp (vocals, keyboards).  Since its formation, Dirty Projectors has released eight full-length studio albums, with the project featuring major contributions from co-lead vocalist and guitarist Amber Coffman from 2006 to 2013.[3][4] Following the release of Rise Above (2007), an album of Black Flag songs as re-imagined from memory, Dirty Projectors released their break-through album, Bitte Orca in 2009. Featuring lead vocals from Longstreth, Coffman, and Angel Deradoorian, the album received widespread critical acclaim and increased the band's exposure significantly. Its follow-up, Swing Lo Magellan (2012) was released to further acclaim.",
     video: "cfhzD3QWipU",
   },
   {
@@ -170,7 +170,7 @@ app.locals.artists = [
     image:
       "https://www.aso.org/assets/img/JLCO_piper_ferguson-3-daae86db99-6895a93371.jpg",
     rank: 17,
-    description:,
+    description: "Dedicated to preserving America's jazz heritage, the Lincoln Center Jazz Orchestra is a key component of New York City's Jazz at Lincoln Center program, serving as the highly versatile house band for a wide variety of concert events. The 15-piece orchestra maintains a heavy touring schedule, devoting around six months annually to appearances around the U.S. and at prominent international venues. Additionally, the LJCO participates in many Jazz at Lincoln Center educational events (for both advanced and younger students), and records occasionally, both as their own entity and as a backing group for artistic director Wynton Marsalis.",
     video: "PhI_QuMZ26c",
   },
   {
@@ -178,7 +178,7 @@ app.locals.artists = [
     name: "Ludwig Van Beethoven",
     image: "https://upload.wikimedia.org/wikipedia/commons/6/6f/Beethoven.jpg",
     rank: 18,
-    description:,
+    description:"Ludwig van Beethoven (1770-1827) was a German composer and pianist who is widely considered to be one of the greatest composers in history. He developed an early interest in music, taking lessons from his father at age four and later studying with other teachers including Mozart. His career spanned several decades, during which he composed some of the most influential works ever written including nine symphonies, five concertos for piano, 32 piano sonatas, 16 string quartets as well as various other pieces. Beethoven's innovative approach to composition revolutionized classical music and influenced generations of musicians that followed him. In addition to being remembered for his musical talent, he also gained recognition for his unwavering determination and courage in the face of adversity, having suffered from a variety of illnesses throughout his life. Beethoven's influence continues to shape classical music today and he is remembered as one of the greatest composers ever.",
     video: "y1mZ6gWnCQI",
   },
   {
@@ -187,7 +187,7 @@ app.locals.artists = [
     image:
       "https://media.npr.org/assets/img/2019/08/02/gettyimages-74296266_wide-afcc02a47199a49733c9e68a4a43a7e414c7f8e3-s1100-c50.jpg",
     rank: 19,
-    description:,
+    description: "Bessie Smith (1894-1937) was an American blues singer who is widely considered to be one of the greatest vocalists in history. She began her career as a street performer and rose to prominence after signing with Columbia Records in 1923, becoming the first African-American female artist to make commercial recordings. During her time at Columbia she recorded over 160 songs which showcased not only her powerful voice but also her incredible range and emotional depth. Her influence extended beyond music, helping pave the way for other black artists in entertainment by advocating for fair pay and treatment from white promoters. Bessie's legacy continues today through her recordings, which have been covered by numerous artists over the years, as well as through tributes such as The Apollo Theater's Bessie Smith Hall of Fame. She is remembered as one of the most influential figures in blues and early jazz music.",
     video: "5Bo3f_9hLkQ",
   },
   {
@@ -196,7 +196,7 @@ app.locals.artists = [
     image:
       "https://upload.wikimedia.org/wikipedia/commons/a/af/Charley_Patton_%281929_photo_portrait%29.jpg",
     rank: 20,
-    description:,
+    description:"Charley Patton (1891-1934) was an American Delta blues musician who is widely regarded as one of the most influential figures in early blues history. He began playing music at a young age and later developed his own style which combined elements of African-American spirituals, country music, and folk songs. His recordings with Paramount Records are considered some of the earliest examples of the Delta Blues genre and have been covered by numerous artists over the years. Charley's influence extended beyond music; he was also a major figure in establishing juke joints throughout Mississippi, helping to create an environment where musicians could perform their craft. Though his career ended abruptly due to illness, Charley Patton left behind a lasting legacy that continues to shape blues music today.",
     video: "IT_7slkQbsQ",
   },
   {
@@ -205,7 +205,7 @@ app.locals.artists = [
     image:
       "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Igor_Stravinsky_LOC_32392u.jpg/1200px-Igor_Stravinsky_LOC_32392u.jpg",
     rank: 21,
-    description:,
+    description:"Igor Stravinsky (1882-1971) was a Russian composer and conductor who is widely considered to be one of the most influential figures in 20th century music. He developed an early interest in composition, eventually studying with the renowned teacher Nikolai Rimsky-Korsakov. His career spanned several decades during which he composed some of his best known works including The Firebird, Petrushka, and The Rite of Spring. These pieces showcased his innovative approach to composition which combined elements from various genres such as classical, folk, and jazz. Throughout his life Igor Stravinsky also conducted many orchestras around the world while also teaching at various universities. His influence continues today through his compositions as well as through recordings made by various artists. He is remembered as one of the greatest composers of all time.",
     video: "pHxstiIybz4",
   },
   {
@@ -214,7 +214,7 @@ app.locals.artists = [
     image:
       "https://media.newyorker.com/photos/635c5d25074e40aefdf45dd3/master/pass/ra1073.jpg",
     rank: 22,
-    description:,
+    description:"Yo-Yo Ma (born 1955) is a Chinese-American cellist and composer who has become one of the world's most celebrated classical musicians. He began learning to play the cello at age four and later studied at the Juilliard School in New York City. Throughout his career he has performed with some of the leading orchestras around the world while also playing solo concerts. Yo-Yo Ma has also been active in recording, having released over 80 albums which have sold millions of copies worldwide. His repertoire spans many genres including classical, jazz, folk music, pop, rock and more. In addition to being recognized as a masterful performer on stage, Yo-Yo Ma is an advocate for arts education and cultural understanding through his various initiatives. He is remembered as one of the greatest cellists of all time.",
     video: "3uiUHvET_jg",
   },
   {
@@ -223,7 +223,7 @@ app.locals.artists = [
     image:
       "https://media.newyorker.com/photos/590975ff1c7a8e33fb38f63a/master/w_2560%2Cc_limit/160425_r28041.jpg",
     rank: 23,
-    description:,
+    description:"Erykah Badu (born 1971) is an American singer and songwriter who has become one of the most influential figures in contemporary R&B music. She began her career as a backing vocalist for various artists before releasing her debut album, Baduizm, in 1997. The album was critically acclaimed and established Erykah's unique sound which blends elements of soul, funk, hip-hop, jazz and more. Her subsequent albums have been similarly praised for their inventive use of samples and unconventional production techniques. In addition to being recognized for her musical talent, Erykah is also an outspoken advocate for social justice issues such as police brutality and racial inequality. Her influence continues today through both her music and activism, making her one of the most important figures in modern R&B.",
     video: "3qpyDUfMq-8",
   },
   {
@@ -232,7 +232,7 @@ app.locals.artists = [
     image:
       "https://media.gq.com/photos/57124fccbf3a8ba177b0c911/4:3/w_1000,h_750,c_limit/j-dilla-02.jpg",
     rank: 24,
-    description:,
+    description: "J Dilla (1974-2006) was an American hip hop producer and rapper who is widely regarded as one of the most influential figures in modern music. He developed a passion for production at a young age and later worked with some of the leading artists in hip hop including A Tribe Called Quest, The Pharcyde, De La Soul, Madlib, and Erykah Badu. His innovative approach to sampling combined elements from various genres such as jazz, soul, funk and more. J Dilla's influence extends beyond music; he also helped establish Detroit's underground hip hop scene by giving aspiring local producers access to his studio equipment. His legacy continues today through his recordings which have been covered by numerous artists over the years. He is remembered as one of the greatest hip hop producers ever.",
     video: "Agl1TgVfls0",
   },
   {
@@ -241,7 +241,7 @@ app.locals.artists = [
     image:
       "https://images.squarespace-cdn.com/content/v1/520ed800e4b0229123208764/1643693510653-USQYC5H458A5XGLOW7VG/34319a9c-943e-4e3f-9475-afc0fc8557a7.jpeg",
     rank: 25,
-    description:,
+    description: "Atmosphere (aka Slug) is an American hip hop artist who has become one of the most influential figures in modern rap music. He began his career as part of the group Atmosphere before releasing his first solo album, Overcast!, in 1997. His subsequent albums have showcased a unique sound which combines elements from various genres such as jazz, soul, and folk while also exploring themes such as depression, addiction and other social issues. In addition to being recognized for his musical talent, Slug is also an advocate for mental health awareness through initiatives such as The Takeover Project and Rhymesayers Entertainment's Heads Up program. His influence continues today through both his music and activism making him one of the most important figures in contemporary hip hop.",
     video: "Ij3Bmw0QgkE",
   },
   {
@@ -250,7 +250,7 @@ app.locals.artists = [
     image:
       "https://yt3.googleusercontent.com/ytc/AL5GRJUOiJk411L8lgfeIq8BkF5AART8n-rjZTWuvjkB=s900-c-k-c0x00ffffff-no-rj",
     rank: 26,
-    description:,
+    description: "The Fugees (also known as The Refugee Camp) were an American hip hop group who rose to prominence in the mid-1990s. Comprised of members Wyclef Jean, Lauryn Hill and Pras Michel, the trio released their debut album Blunted on Reality in 1994 which showcased a unique sound blending elements from various genres such as reggae, soul, and R&B. Their follow up album The Score was even more successful, selling over 18 million copies worldwide while also winning two Grammy Awards. In addition to being recognized for their musical talent, The Fugees are also credited with helping bring awareness to social issues through their lyrics and activism. Their influence continues today through both their music and legacy making them one of the most important groups in hip hop history.",
     video: "aIXyKmElvv8",
   },
   {
@@ -277,7 +277,7 @@ app.locals.artists = [
     image:
       "https://communique.uccs.edu/wp-content/uploads/2020/02/ars_864x486-nicholas-payton-quartet.jpg",
     rank: 29,
-    description:,
+    description: "Nicholas Payton (born 1973) is an American jazz trumpeter and composer who has become one of the most influential figures in modern jazz. He began playing trumpet at age four, eventually studying music at the New Orleans Center for Creative Arts before embarking on a professional career that spanned several decades. His recordings have showcased his unique sound which blends elements from various genres such as funk, R&B, hip hop and more while also exploring themes such as race and identity. In addition to being recognized for his musical talent, Nicholas Payton is also an advocate for social justice issues through initiatives such as The Black American Music Association. His influence continues today through both his music and activism making him one of the most important figures in contemporary jazz.",
     video: "f_dSlxgD2Fo",
   },
   {
@@ -286,7 +286,7 @@ app.locals.artists = [
     image:
       "https://media.pitchfork.com/photos/5e40c6d00ad70b00084a00c5/2:1/w_2560%2Cc_limit/Randy%2520Newman-GettyImages-1205160724.jpg",
     rank: 30,
-    description:,
+    description:"Randy Newman (born 1943) is an American singer-songwriter who has become one of the most influential figures in contemporary music. He developed an early interest in composition and later studied music at UCLA before embarking on a career that spanned several decades. His recordings have showcased his unique songwriting style which combines elements from various genres such as rock, pop, jazz, blues and more while also exploring themes such as love, loss and human nature. In addition to being recognized for his musical talent, Randy Newman is also an advocate for social justice issues through initiatives such as The Voice Project. His influence continues today through both his songs and activism making him one of the most important figures in modern music.",
     video: "1wFWR5qCB2k",
   },
 ];
