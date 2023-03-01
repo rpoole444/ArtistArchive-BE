@@ -43,21 +43,22 @@ app.get("/api/v1/artists/:id", (request, response) => {
 
 app.post("/api/v1/artists", (request, response) => {
   const artist = request.body;
-  const { id, name, image, rank, description, video } = artist;
+  const { id, name, image, rank, genre, description, video } = artist;
   for (let requiredParameter of [
     "id",
     "name",
     "image",
     "rank",
+    "genre",
     "description",
     "video",
   ]) {
     if (!artist[requiredParameter]) {
       response.status(422).send({
-        error: `Expected format: { id: <String>, name: <String>, image: <https>, rank: <Number>, description: <String>, video: <String> }. You're missing a "${requiredParameter}" property.`,
+        error: `Expected format: { id: <String>, name: <String>, image: <https>, rank: <Number>, genre: <String>, description: <String>, video: <String> }. You're missing a "${requiredParameter}" property.`,
       });
     }
   }
-  app.locals.artists.push({ id, name, image, rank, description, video });
-  response.status(201).json({ id, name, image, rank, description, video });
+  app.locals.artists.push({ id, name, image, rank, genre, description, video });
+  response.status(201).json({ id, name, image, rank, genre, description, video });
 });
