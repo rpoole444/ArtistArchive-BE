@@ -17,12 +17,6 @@ app.get("/", (request, response) => {
   response.send("Heyo! From Reid!");
 });
 
-app.listen(app.get("port"), () => {
-  console.log(
-    `${app.locals.title} is running on http://localhost:${app.get("port")}.`
-  );
-});
-
 app.get("/api/v1/artists", (request, response) => {
   console.log(response);
   const { artists } = app.locals;
@@ -116,13 +110,13 @@ app.post("/api/v1/artists", (request, response) => {
 });
 
 app.delete("/api/v1/favorites/:id", (request, response) => {
-  console.log("HITTING!");
   const length = app.locals.favorites.length;
   const newFavorites = app.locals.favorites.filter((favorite) => {
     return favorite.id !== request.params.id;
   });
+
   app.locals.favorites = newFavorites;
-  console.log("HERE!!", newFavorites);
+
   if (newFavorites.length !== length) {
     return response.status(200).json({
       message: `Artist with id number ${request.params.id} has been removed from favorites`,
@@ -130,4 +124,30 @@ app.delete("/api/v1/favorites/:id", (request, response) => {
   } else {
     return response.status(404);
   }
+});
+
+app.patch("/api/v1/artists/:id", async (request, response) => {
+  console.log("BODY: ", request.body);
+  const musician = app.locals.favorites.find(
+    (favorite) => favorite.id === request.params.id
+  );
+  console.log(musician);
+  if (musician) {
+    musician.isFavorited = request.body.isFavorited;
+    return response.status(200).json({
+      message: `Artist with id number ${request.params.id}`,
+      isFavorited: `${request.params.isFavorited}`,
+    });
+  } else {
+    response.status(404).json({
+      error:
+        "This request failed, Double Check your request body and id for proper formatting",
+    });
+  }
+});
+
+app.listen(app.get("port"), () => {
+  console.log(
+    `${app.locals.title} is running on http://localhost:${app.get("port")}.`
+  );
 });
