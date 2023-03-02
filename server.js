@@ -36,10 +36,8 @@ app.get("/api/v1/artists/:id", (request, response) => {
 
 app.get("/api/v1/favorites", (request, response) => {
   const { favorites } = app.locals;
-  response
-    .status(200)
-    .json(favorites)
-    .catch((error) => response.status(500).json({ error }));
+  response.status(200).json(favorites);
+  // .catch((error) => response.status(500).json({ error }));
 });
 
 app.post("/api/v1/favorites", (request, response) => {
