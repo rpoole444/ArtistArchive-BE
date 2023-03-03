@@ -14,11 +14,10 @@ app.locals.artists = artists;
 app.locals.favorites = favorites;
 
 app.get("/", (request, response) => {
-  response.send("Heyo! From Reid!");
+  response.send("Heyo! You're Nearing the Archive!");
 });
 
 app.get("/api/v1/artists", (request, response) => {
-  console.log(response);
   const { artists } = app.locals;
   response.json({ artists });
 });
@@ -42,10 +41,10 @@ app.get("/api/v1/favorites", (request, response) => {
 
 app.post("/api/v1/favorites", (request, response) => {
   console.log("hit Post!!!");
-  // console.log("request: ", request);
   const artist = request.body;
   // const xpressID = Date.now();
-  const { id, name, image, rank, genre, description, video } = artist;
+  const { id, name, image, rank, genre, description, video, isFavorited } =
+    artist;
   for (let requiredParameter of [
     "id",
     "name",
@@ -53,6 +52,7 @@ app.post("/api/v1/favorites", (request, response) => {
     "rank",
     "genre",
     "video",
+    "isFavorited",
   ]) {
     if (!artist[requiredParameter]) {
       response.status(422).send({
@@ -60,24 +60,28 @@ app.post("/api/v1/favorites", (request, response) => {
       });
     }
   }
-  app.locals.favorites.push({
-    id,
-    name,
-    image,
-    rank,
-    genre,
-    description,
-    video,
-  });
+  if (!app.locals.favorites.includes(artist)) {
+    app.locals.favorites.push({
+      id,
+      name,
+      image,
+      rank,
+      genre,
+      description,
+      video,
+      isFavorited,
+    });
+  }
   response
     .status(201)
-    .json({ id, name, image, rank, genre, description, video });
+    .json({ id, name, image, rank, genre, description, video, isFavorited });
 });
 
 app.post("/api/v1/artists", (request, response) => {
   const artist = request.body;
   // const xpressID = Date.now();
-  const { id, name, image, rank, genre, description, video } = artist;
+  const { id, name, image, rank, genre, description, video, isFavorited } =
+    artist;
   for (let requiredParameter of [
     "id",
     "name",
@@ -86,25 +90,34 @@ app.post("/api/v1/artists", (request, response) => {
     "genre",
     "description",
     "video",
+    "isFavorited",
   ]) {
     if (!artist[requiredParameter]) {
       response.status(422).send({
-        error: `Expected format: { id: <String>, name: <String>, image: <https>, rank: <Number>, genre: <String>, description: <String>, video: <String> }. You're missing a "${requiredParameter}" property.`,
+        error: `Expected format: { id: <String>, name: <String>, image: <https>, rank: <Number>, genre: <String>, description: <String>, video: <String>, isFavorited: <Boolean> }. You're missing a "${requiredParameter}" property.`,
       });
     }
   }
-  app.locals.artists.push({
-    id,
-    name,
-    image,
-    rank,
-    genre,
-    description,
-    video,
-  }); // if duplicated id send a 400
-  response
-    .status(201)
-    .json({ id, name, image, rank, genre, description, video });
+
+  if (!app.locals.artists.includes(artist)) {
+    app.locals.artists.push({
+      id,
+      name,
+      image,
+      rank,
+      genre,
+      description,
+      video,
+      isFavorited,
+    }); // if duplicated id send a 400
+    response
+      .status(201)
+      .json({ id, name, image, rank, genre, description, video, isFavorited });
+  } else {
+    return response
+      .status(400)
+      .json({ error: "You Already favorited this artist" });
+  }
 });
 
 app.delete("/api/v1/favorites/:id", (request, response) => {
@@ -125,23 +138,29 @@ app.delete("/api/v1/favorites/:id", (request, response) => {
 });
 
 app.patch("/api/v1/artists/:id", async (request, response) => {
-  console.log("BODY: ", request.body);
+  // console.log("BODY: ", request.body);
   const musician = app.locals.favorites.find(
     (favorite) => favorite.id === request.params.id
   );
-  console.log(musician);
-  if (musician) {
-    musician.isFavorited = request.body.isFavorited;
-    return response.status(200).json({
-      message: `Artist with id number ${request.params.id}`,
-      isFavorited: `${request.params.isFavorited}`,
-    });
+  console.log("PATCH: ", musician);
+  if (!musician) {
+    return response.status(404);
   } else {
-    response.status(404).json({
-      error:
-        "This request failed, Double Check your request body and id for proper formatting",
-    });
+    musician.isFavorited = request.body.isFavorited;
+    response.json(musician);
   }
+
+  //   musician.isFavorited = request.body.isFavorited;
+  //   return response.status(200).json({
+  //     message: `Artist with id number ${request.params.id}`,
+  //     isFavorited: `${request.params.isFavorited}`,
+  //   });
+  // } else {
+  //   response.status(404).json({
+  //     error:
+  //       "This request failed, Double Check your request body and id for proper formatting",
+  //   });
+  // }
 });
 
 app.listen(app.get("port"), () => {
