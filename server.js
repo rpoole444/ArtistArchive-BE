@@ -129,6 +129,7 @@ app.delete("/api/v1/favorites/:id", (request, response) => {
   app.locals.favorites = newFavorites;
 
   if (newFavorites.length !== length) {
+    console.log("DELETE");
     return response.status(200).json({
       message: `Artist with id number ${request.params.id} has been removed from favorites`,
     });
