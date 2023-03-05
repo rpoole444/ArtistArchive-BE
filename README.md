@@ -17,7 +17,7 @@ Do you have a hard time picking out the right musical artist to listen to?  Well
   - [Entry Point](https://artist-archive-be.herokuapp.com)
   - [Artists](https://artist-archive-be.herokuapp.com/api/v1/artists)
 - FE
--   [Artist Archive](https://artist-archive-fe.herokuapp.com/)
+  - [Artist Archive](https://artist-archive-fe.herokuapp.com/)
   
 - Run Locally 
   - Clone down this repo [here](https://github.com/KarrarQ/shelf-life-BE)
