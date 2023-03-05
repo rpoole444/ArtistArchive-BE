@@ -13,8 +13,11 @@ Do you have a hard time picking out the right musical artist to listen to?  Well
 
 ## Setup
 - Deployed on Heroku 
+- BE
   - [Entry Point](https://artist-archive-be.herokuapp.com)
   - [Artists](https://artist-archive-be.herokuapp.com/api/v1/artists)
+- FE
+-   [Artist Archive](https://artist-archive-fe.herokuapp.com/)
   
 - Run Locally 
   - Clone down this repo [here](https://github.com/KarrarQ/shelf-life-BE)
