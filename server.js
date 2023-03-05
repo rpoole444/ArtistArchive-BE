@@ -2,6 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const app = express();
 const artists = require("./data/artist-data");
+const environment = process.env.NODE_ENV ||'development'
 
 app.use(cors());
 app.use(express.json());
