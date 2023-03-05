@@ -42,12 +42,11 @@ Do you have a hard time picking out the right musical artist to listen to?  Well
 
 ## Abstract 
 
-This project is a custom built backend, with a GET methods, attached to a custom tables of customized data containing videos and biography. We connected our Express app with postseQL using the helper dependency of knex!  Knex helps us build our tables with migrations, and then it helps us fill the tables out with our data, using Seeding!  The first table we created in our Shelf Life Database is for books that users recommend, we started off with 10 per group member so a total of 30 recommendations in our first table.  The Favorites table is affected by the user's choice of favorite books, this database - table updates with the User's actions.  Finally we created a third table that included the New York Times Best Sellers top 100 books, Though we did not have enough time (one week) to build out the full FE functionality, the Backend table is ready to go! We imagined users going through the our top100 database table and choosing books to add (POST) to the recomendation database.  
+This project is a custom built backend, with a GET methods, attached to a custom tables of customized data containing videos and biography of inspiring artists. I built a frontend where you can find the repo [HERE](https://github.com/rpoole444/ArtistArchive-FE) I built both the backend and the frontend in only a week. 
 ## Learning Goals
 
-- Build Backend using Express, Knex, and PostseQL
+- Build Backend using Express
 - Gain competency with Backend flow and fundamentals
-- Learn how to create and use Migration and seeding files
 - Practice and Deploy our backend using Heroku
 - Create DRY and clean code!
 
@@ -58,8 +57,6 @@ This project is a custom built backend, with a GET methods, attached to a custom
 - Successfully built a full stack app!
 - successfully organized our BE architecture to run efficiently and for devs to easily understand! 
 - Creating a fresh custom backend and then manipulating the data using React was a learning curve, but ultimately it was super cool to build a full stack app!
-- After creating our first two databases, we added a third (top100) and this process was interesting, inthat we had to navigate a new table in code that had already been working, instead of a clean slate.  It was a little bit of a struggle, but ultimately we were successful
-- We would have liked to further this app by beautfying the recommendation page, and cleaning up the functionality on the FE otherwise, the Backend is complete!
 
 ## Authors
 
