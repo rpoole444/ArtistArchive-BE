@@ -23,13 +23,17 @@ app.get("/", (request, response) => {
 });
 
 app.get("/api/v1/artists", (request, response) => {
-  // const { artists } = app.locals;
-  // response.json({ artists });
   queries
-  .getAllArtists()
-  .then((data) => response.status(200).json(data))
-  .catch((error) => response.status(500).json({ error }))
+    .getAllArtists()
+    .then((data) => response.status(200).json(data))
+    .catch((error) => {
+      console.error(error);
+      response.status(500).json({ error: 'Something went wrong on the server' })
+    });
+    // const { artists } = app.locals;
+    // response.json({ artists });
 });
+
 
 app.get("/api/v1/artists/:id", (request, response) => {
   const { id } = request.params;
