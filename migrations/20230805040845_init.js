@@ -2,7 +2,7 @@
 exports.up = function(knex) {
   return knex.schema
   .createTable("artists", (table) => {
-    table.increments("PGid").primary()
+    table.increments("pgid").primary()
     table.string("id");
     table.string("name");
     table.string("image");
@@ -13,7 +13,7 @@ exports.up = function(knex) {
     table.boolean("isFavorited").defaultTo(false);
   })
   .createTable("favorites", (table) => {
-    table.increments("PGid").primary()
+    table.increments("pgid").primary()
     table.string("id");
     table.string("name");
     table.string("image");

@@ -6,6 +6,6 @@ exports.up = function (knex) {
 
 exports.down = function (knex) {
   return knex.schema.table("favorites", (table) => {
-    table.dropTimestamps(true, true);
+    table.dropTimestamps();
   });
 };

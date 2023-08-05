@@ -1,11 +1,11 @@
 exports.up = function (knex) {
   return knex.schema.alterTable("favorites", (table) => {
-    table.unique("PGid")
+    table.unique("pgid")
   })
 };
 
 exports.down = function (knex) {
   return knex.schema.table("favorites", (table) => {
-    table.dropUnique("PGid")
+    table.dropUnique("pgid")
   })
 };
