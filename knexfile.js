@@ -5,10 +5,10 @@ module.exports = {
   development: {
     client: 'postgresql',
     connection: {
-      database: "artist_archive",
-      port: 5432,
-      user: "postgres", 
-      password: "RLft353244"
+      database: process.env.DEV_DATABASE_NAME,
+      port: process.env.DEV_DATABASE_PORT,
+      user: process.env.DEV_DATABASE_USER,
+      password: process.env.DEV_DATABASE_PASSWORD,
     },
     migrations: {
       directory: "./migrations"

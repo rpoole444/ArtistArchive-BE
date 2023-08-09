@@ -42,7 +42,7 @@ app.get("/api/v1/artists/:id", (request, response) => {
   // }
 
   queries
-  .getSingleArtist()
+  .getSingleArtist(request)
   .then((artists) => {
     if(artists.length) {
       response.status(200).json(artists)
